@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="container">
+        <h1>Projects</h1>
+        <p>Here is a summary of my projects</p>
+    </div>
+    
+
+    <script>
+        window.onload = function() {
+            const navbarPlaceholder = document.getElementById('navbar-placeholder');
+            fetch('navbar.html') 
+                .then(response => response.text()) 
+                .then(data => {
+                    navbarPlaceholder.innerHTML = data;  
+                })
+                .catch(error => console.error('Error loading navbar:', error)); 
+        }
+    </script>
+</body>
+</html>
